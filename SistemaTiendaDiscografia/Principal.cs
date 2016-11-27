@@ -9,8 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemaTiendaDiscografia;
-
+//using SistemaTiendaDiscografia;
+using SistemaTiendaDiscografia.Consultas;
 
 namespace SistemaTiendaDiscografia
 {
@@ -43,7 +43,14 @@ namespace SistemaTiendaDiscografia
         private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Consultas.ConsultaUsuarios cu = new Consultas.ConsultaUsuarios();
-            //cu.MdiParent = this;
+            cu.MdiParent = this.MdiParent;
+            cu.Show();
+        }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaClientes cu = new ConsultaClientes();
+            cu.MdiParent = this.MdiParent;
             cu.Show();
         }
     }

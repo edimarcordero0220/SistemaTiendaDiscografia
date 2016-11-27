@@ -50,14 +50,25 @@ namespace SistemaTiendaDiscografia.Registros
         }
         public void BuscarDiscos(Discos discos)
         {
-            IdtextBox.Text = discos.IdDisco.ToString();
-            NombretextBox.Text = discos.NombreDisco;
-            ArtistatextBox.Text = discos.Artista;
-            ProductortextBox.Text = discos.Productor;
-            SellotextBox.Text = discos.SelloDiscografico;
-            FechaLamzamientodateTimePicker.Value = discos.FechaDeLanzamiento;
-            FechaCreaciondateTimePicker.Value = discos.FechaCreacion;
+            if (NombretextBox.Text == "" || ArtistatextBox.Text == "" || ProductortextBox.Text == ""
+                || SellotextBox.Text == "")
+            {
+                MessageBox.Show("Por Favor Llenar Todos Los Campos Del Registro De Disco!!");
+            }
+            else
+            {
+                IdtextBox.Text = discos.IdDisco.ToString();
+                NombretextBox.Text = discos.NombreDisco;
+                ArtistatextBox.Text = discos.Artista;
+                ProductortextBox.Text = discos.Productor;
+                SellotextBox.Text = discos.SelloDiscografico;
+                FechaLamzamientodateTimePicker.Value = discos.FechaDeLanzamiento;
+                FechaCreaciondateTimePicker.Value = discos.FechaCreacion;
+
+            }
         }
+        
+        
 
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
@@ -73,6 +84,82 @@ namespace SistemaTiendaDiscografia.Registros
 
             DiscosBLL.Eliminar(ut.String(IdtextBox.Text));
             MessageBox.Show("Eliminado");
+        }
+
+        private void RegistrosDiscos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FechaLamzamientodateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductortextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SellotextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NombretextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ArtistatextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IdtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Clickbutton_Click(object sender, EventArgs e)
+        {
+            DetalleDisco d = new DetalleDisco();
+            d.Show();
         }
     }
 }

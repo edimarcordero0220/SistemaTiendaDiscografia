@@ -189,7 +189,6 @@
             // 
             // FechaCreaciondateTimePicker
             // 
-            this.FechaCreaciondateTimePicker.Enabled = false;
             this.FechaCreaciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaCreaciondateTimePicker.Location = new System.Drawing.Point(426, 12);
             this.FechaCreaciondateTimePicker.Name = "FechaCreaciondateTimePicker";

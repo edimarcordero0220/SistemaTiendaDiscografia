@@ -44,7 +44,8 @@
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(25, 197);
+            this.Buscarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Buscarbutton.Location = new System.Drawing.Point(187, 232);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(88, 31);
             this.Buscarbutton.TabIndex = 0;
@@ -55,70 +56,79 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 9);
+            this.label1.Location = new System.Drawing.Point(143, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Id";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ContrasenatextBox
             // 
-            this.ContrasenatextBox.Location = new System.Drawing.Point(250, 2);
+            this.ContrasenatextBox.Location = new System.Drawing.Point(368, 62);
             this.ContrasenatextBox.Name = "ContrasenatextBox";
             this.ContrasenatextBox.Size = new System.Drawing.Size(108, 20);
             this.ContrasenatextBox.TabIndex = 2;
+            this.ContrasenatextBox.TextChanged += new System.EventHandler(this.ContrasenatextBox_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 55);
+            this.label2.Location = new System.Drawing.Point(143, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(183, 6);
+            this.label3.Location = new System.Drawing.Point(301, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Contraseña";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(190, 50);
+            this.label4.Location = new System.Drawing.Point(308, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Confirmar ";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // IdtextBox
             // 
-            this.IdtextBox.Location = new System.Drawing.Point(69, 6);
+            this.IdtextBox.Location = new System.Drawing.Point(187, 66);
             this.IdtextBox.Name = "IdtextBox";
             this.IdtextBox.Size = new System.Drawing.Size(34, 20);
             this.IdtextBox.TabIndex = 6;
+            this.IdtextBox.TextChanged += new System.EventHandler(this.IdtextBox_TextChanged);
             // 
             // ConfirmarContrasenatextBox
             // 
-            this.ConfirmarContrasenatextBox.Location = new System.Drawing.Point(250, 47);
+            this.ConfirmarContrasenatextBox.Location = new System.Drawing.Point(368, 107);
             this.ConfirmarContrasenatextBox.Name = "ConfirmarContrasenatextBox";
             this.ConfirmarContrasenatextBox.Size = new System.Drawing.Size(108, 20);
             this.ConfirmarContrasenatextBox.TabIndex = 7;
+            this.ConfirmarContrasenatextBox.TextChanged += new System.EventHandler(this.ConfirmarContrasenatextBox_TextChanged);
             // 
             // NombretextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(69, 47);
+            this.NombretextBox.Location = new System.Drawing.Point(187, 107);
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(100, 20);
             this.NombretextBox.TabIndex = 8;
+            this.NombretextBox.TextChanged += new System.EventHandler(this.NombretextBox_TextChanged);
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(186, 197);
+            this.Nuevobutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Nuevobutton.Location = new System.Drawing.Point(408, 232);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(95, 31);
             this.Nuevobutton.TabIndex = 9;
@@ -128,7 +138,8 @@
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(186, 124);
+            this.Eliminarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Eliminarbutton.Location = new System.Drawing.Point(297, 232);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(95, 33);
             this.Eliminarbutton.TabIndex = 10;
@@ -138,7 +149,8 @@
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(28, 124);
+            this.Guardarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Guardarbutton.Location = new System.Drawing.Point(75, 232);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(85, 33);
             this.Guardarbutton.TabIndex = 11;
@@ -150,7 +162,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 261);
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackgroundImage = global::SistemaTiendaDiscografia.Properties.Resources.j;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(589, 299);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -163,6 +178,7 @@
             this.Controls.Add(this.ContrasenatextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Buscarbutton);
+            this.DoubleBuffered = true;
             this.Name = "RegistroUsuario";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

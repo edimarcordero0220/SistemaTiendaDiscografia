@@ -51,28 +51,59 @@ namespace BLL
                 throw ex;
             }
         }
-        public static List<Clientes> GetListaNombre(string tmp)
-        {
-            List<Clientes> lista = new List<Clientes>();
-            SistemaDiscograficoDb db = new SistemaDiscograficoDb();
-            lista = db.Clientes.Where(p => p.NombreCliente == tmp).ToList();
-            return lista;
-        }
         public static List<Clientes> GetLista()
         {
             List<Clientes> lista = new List<Clientes>();
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
             lista = db.Clientes.ToList();
             return lista;
+
         }
-        public static List<Clientes> GetLista(int clienteId)
+       
+        
+        public static List<Clientes> GetListaId(int clienteId)
         {
             List<Clientes> lista = new List<Clientes>();
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
             lista = db.Clientes.Where(p => p.IdCliente == clienteId).ToList();
             return lista;
-
         }
+        public static List<Clientes> GetListaCedula(string cedula)
+        {
+            List<Clientes> lista = new List<Clientes>();
+            SistemaDiscograficoDb db = new SistemaDiscograficoDb();
+            lista = db.Clientes.Where(p => p.CedulaCliente == cedula).ToList();
+            return lista;
+        }
+        public static List<Clientes> GetListaDireccion(string direccion)
+        {
+            List<Clientes> lista = new List<Clientes>();
+            SistemaDiscograficoDb db = new SistemaDiscograficoDb();
+            lista = db.Clientes.Where(p => p.DireccionCliente == direccion).ToList();
+            return lista;
+        }
+        public static List<Clientes> GetListaFecha(DateTime Desde, DateTime Hasta)
+        {
+            List<Clientes> lista = new List<Clientes>();
+            SistemaDiscograficoDb db = new SistemaDiscograficoDb();
+            lista = db.Clientes.Where(p => p.FechaCreacion >= Desde && p.FechaCreacion <= Hasta).ToList();
+            return lista;
+        }
+        public static List<Clientes> GetListaNombre(string NombreCliente)
+        {
+            List<Clientes> lista = new List<Clientes>();
+            SistemaDiscograficoDb db = new SistemaDiscograficoDb();
+            lista = db.Clientes.Where(p => p.NombreCliente == NombreCliente).ToList();
+            return lista;
+        }
+        public static List<Clientes> GetListaApellido(string Apellido)
+        {
+            List<Clientes> lista = new List<Clientes>();
+            SistemaDiscograficoDb db = new SistemaDiscograficoDb();
+            lista = db.Clientes.Where(p => p.ApellidoCliente == Apellido).ToList();
+            return lista;
+        }
+       
 
     }
 }

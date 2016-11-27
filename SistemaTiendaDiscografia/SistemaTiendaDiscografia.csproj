@@ -58,17 +58,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\ConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaClientes.Designer.cs">
+      <DependentUpon>ConsultaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaDiscos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaDiscos.Designer.cs">
+      <DependentUpon>ConsultaDiscos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ConsultaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\ConsultaUsuarios.Designer.cs">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\ReporteViewerClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ReporteViewerClientes.Designer.cs">
+      <DependentUpon>ReporteViewerClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ReporteViewerUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\ReporteViewerUsuarios.Designer.cs">
       <DependentUpon>ReporteViewerUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\DetalleDisco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\DetalleDisco.Designer.cs">
+      <DependentUpon>DetalleDisco.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\RegistroClientes.cs">
       <SubType>Form</SubType>
@@ -107,12 +131,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaDiscograficoDbClienteDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SistemaDiscograficoDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaDiscograficoDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaDiscograficoDbDiscosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaDiscograficoDbDiscosDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
+    <EmbeddedResource Include="Consultas\ConsultaClientes.resx">
+      <DependentUpon>ConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaDiscos.resx">
+      <DependentUpon>ConsultaDiscos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ReporteViewerClientes.resx">
+      <DependentUpon>ReporteViewerClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ReporteViewerUsuarios.resx">
       <DependentUpon>ReporteViewerUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\DetalleDisco.resx">
+      <DependentUpon>DetalleDisco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\RegistroClientes.resx">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
@@ -139,6 +185,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\ReportDisco.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteUsuarios.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteCliente.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -160,6 +208,28 @@
     </None>
     <None Include="SistemaDiscograficoDbClienteDataSet.xss">
       <DependentUpon>SistemaDiscograficoDbClienteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaDiscograficoDbDataSet.xsc">
+      <DependentUpon>SistemaDiscograficoDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaDiscograficoDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaDiscograficoDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaDiscograficoDbDataSet.xss">
+      <DependentUpon>SistemaDiscograficoDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaDiscograficoDbDiscosDataSet.xsc">
+      <DependentUpon>SistemaDiscograficoDbDiscosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaDiscograficoDbDiscosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaDiscograficoDbDiscosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaDiscograficoDbDiscosDataSet.xss">
+      <DependentUpon>SistemaDiscograficoDbDiscosDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
