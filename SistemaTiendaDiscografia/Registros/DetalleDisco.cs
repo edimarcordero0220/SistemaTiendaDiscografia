@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Entidades;
 namespace SistemaTiendaDiscografia.Registros
 {
     public partial class DetalleDisco : Form
@@ -15,6 +15,13 @@ namespace SistemaTiendaDiscografia.Registros
         public DetalleDisco()
         {
             InitializeComponent();
+        }
+        public void LlenarClase(DetallesDeDiscos d)
+        {
+           d.Cancion= CanciontextBox.Text;
+            d.DuracionDeLaCancion = DuraciontextBox.Text;
+            d.FechaCreacion = dateTimePicker.Value;
+
         }
         public void LlenarCombo()
         {
@@ -45,6 +52,29 @@ namespace SistemaTiendaDiscografia.Registros
             dataGridView.Columns.Add(c);
             dataGridView.Columns.Add(d);
          
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CanciontextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Agregarbutton_Click(object sender, EventArgs e)
+        {
+            if (CanciontextBox.Text != string.Empty && DuraciontextBox.Text!=string.Empty)
+            {
+                dataGridView.Rows.Add(CanciontextBox.Text, DuraciontextBox.Text);
+            }
         }
     }
 }
