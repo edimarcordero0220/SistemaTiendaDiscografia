@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Discos
+    public class Disco
     {
         [Key]
         public int IdDisco { get; set; }
@@ -19,17 +19,19 @@ namespace Entidades
         public DateTime FechaDeLanzamiento { get; set; }
         public DateTime FechaCreacion { get; set; }
 
+
         public virtual List<Factura> Factura { get; set; }
-        public Discos()
+        public Disco()
         {
             this.Factura = new List<Entidades.Factura>();
         }
-        public Discos(int iddisco, string nombredisco)
+        public Disco(int iddisco, string nombredisco)
         {
             this.IdDisco = iddisco;
             this.NombreDisco = nombredisco;
             this.Factura = new List<Entidades.Factura>();
-                
+
         }
+
     }
 }

@@ -18,15 +18,15 @@ namespace SistemaTiendaDiscografia.Registros
         {
             InitializeComponent();
         }
-        Entidades.DetalleFactura dico = new Entidades.DetalleFactura();
+        Entidades.Discos dico = new Entidades.Discos();
         Utilidades u = new Utilidades();
-        public void LlenarClase(Entidades.DetalleFactura dc)
+        public void LlenarClase(Entidades.Discos dc)
 
         {
 
             dc.NombreDisco = IdNombretextBox.Text;
         }
-        private void Llenar(Entidades.DetalleFactura disco)
+        private void Llenar(Entidades.Discos disco)
         {
             var dcs = DiscosBLL.Buscar(u.String(IdtextBox.Text));
             IdtextBox.Text = disco.IdDisco.ToString();

@@ -37,13 +37,20 @@ namespace SistemaTiendaDiscografia.Registros
         
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-           
             DetallesDeDiscos detalle = new DetallesDeDiscos();
-            
+            //DetalleDisco di = new DetalleDisco();
             LlenarClase(detalle);
-         
-           DetallesDeDiscosBLL.Insertar(detalle);
-            
+            DetallesDeDiscosBLL.Insertar(detalle);
+            MessageBox.Show("Guardado con Exito");
+            /*
+             DetallesDeDiscos detalle = new DetallesDeDiscos();
+
+             LlenarClase(detalle);
+
+            DetallesDeDiscosBLL.Insertar(detalle);*/
+
+
+
 
         }
 

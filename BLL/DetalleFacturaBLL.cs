@@ -17,13 +17,13 @@ namespace BLL
             try
             {
                 SistemaDiscograficoDb db = new SistemaDiscograficoDb();
-                db.DetalleFactura.Add(f);
-                var df = db.DetalleFactura.Add(f);
+                db.DetallesFacturas.Add(f);
+                var df = db.DetallesFacturas.Add(f);
                 foreach (var produ in df.Discos)
                 {
                     db.Entry(produ).State = EntityState.Unchanged;
                 }
-                db.DetalleFactura.Add(f);
+                db.DetallesFacturas.Add(f);
                 db.SaveChanges();
                 db.Dispose();
             }
@@ -35,24 +35,24 @@ namespace BLL
         public static void Eliminar(Factura f)
         {
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
-            Factura fa = db.DetalleFactura.Find(f);
-            db.DetalleFactura.Remove(fa);
+            Factura fa = db.DetallesFacturas.Find(f);
+            db.DetallesFacturas.Remove(fa);
             db.SaveChanges();
 
         }
         public static void Eliminar(int v)
         {
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
-            Factura fa = db.DetalleFactura.Find(v);
+            Factura fa = db.DetallesFacturas.Find(v);
 
 
-            db.DetalleFactura.Remove(fa);
+            db.DetallesFacturas.Remove(fa);
             db.SaveChanges();
         }
         public static Factura Buscar(int Id)
         {
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
-            return db.DetalleFactura.Find(Id);
+            return db.DetallesFacturas.Find(Id);
         }
     }
 }

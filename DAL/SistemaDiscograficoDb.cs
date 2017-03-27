@@ -15,15 +15,16 @@ namespace DAL
 
         }
         public virtual DbSet<Usuarios> Usuario { get; set; }
-        public virtual DbSet<DetalleFactura> disco { get; set; }
+        public virtual DbSet<Discos> disco { get; set; }
+        
         public virtual DbSet<Clientes> Clientes { get; set; }
         public virtual DbSet<DetallesDeDiscos> DetalleDeDiscos { get; set; }
-        public virtual DbSet<Factura> DetalleFactura { get; set; }
+        public virtual DbSet<Factura> DetallesFacturas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Factura>()
-                  .HasMany<DetalleFactura>(df => df.Discos)
+                  .HasMany<Discos>(df => df.Discos)
                   .WithMany(p => p.Factura)
                   .Map(dfp =>
                   {

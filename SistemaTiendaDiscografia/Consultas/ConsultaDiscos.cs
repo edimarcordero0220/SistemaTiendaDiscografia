@@ -24,7 +24,7 @@ namespace SistemaTiendaDiscografia.Consultas
                 BuscarCombo();
         }
         Utilidades util = new Utilidades();
-        public List<DetalleFactura> lista = new List<DetalleFactura>();
+        public List<Discos> lista = new List<Discos>();
         private void BuscarCombo()
         {
             if (FiltrarcomboBox.SelectedIndex == 0)

@@ -19,7 +19,7 @@ namespace SistemaTiendaDiscografia.Registros
             InitializeComponent();
         }
         Utilidades ut = new Utilidades();
-        public void LlenarClase(Entidades.DetalleFactura d)
+        public void LlenarClase(Entidades.Discos d)
         {
             d.NombreDisco = NombretextBox.Text;
             d.Productor = ProductortextBox.Text;
@@ -30,7 +30,7 @@ namespace SistemaTiendaDiscografia.Registros
         }
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            Entidades.DetalleFactura discos = new Entidades.DetalleFactura();
+            Entidades.Discos discos = new Entidades.Discos();
             LlenarClase(discos);
             DiscosBLL.Insertar(discos);
             MessageBox.Show("Guardado");
@@ -48,7 +48,7 @@ namespace SistemaTiendaDiscografia.Registros
             int.TryParse(texto, out numero);
             return numero;
         }
-        public void BuscarDiscos(Entidades.DetalleFactura discos)
+        public void BuscarDiscos(Entidades.Discos discos)
         {
             if (NombretextBox.Text == "" || ArtistatextBox.Text == "" || ProductortextBox.Text == ""
                 || SellotextBox.Text == "")

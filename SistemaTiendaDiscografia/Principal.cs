@@ -63,7 +63,12 @@ namespace SistemaTiendaDiscografia
 
         private void detalleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Factura cu = new Factura();
+            
+        }
+
+        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RFacturas cu = new RFacturas();
             cu.MdiParent = this.MdiParent;
             cu.Show();
         }

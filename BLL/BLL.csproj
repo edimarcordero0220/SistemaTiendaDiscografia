@@ -54,6 +54,7 @@
     <Compile Include="DetalleFacturaBLL.cs" />
     <Compile Include="DetallesDeDiscosBLL.cs" />
     <Compile Include="DiscosBLL.cs" />
+    <Compile Include="FacturaBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuariosBLL.cs" />
   </ItemGroup>

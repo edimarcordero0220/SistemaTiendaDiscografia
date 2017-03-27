@@ -13,14 +13,20 @@ namespace Entidades
         [Key]
         public int IdFactura { get; set; }
         public int IdCliente { get; set; }
-        
+        public string Nombre { get; set; }
+        public string NombreDisco { get; set; }
+        public decimal Precio { get; set; }
+
+
+
+
 
         public DateTime FechaVenta { get; set; }
 
-        public virtual List<DetalleFactura> Discos { get; set; }
+        public virtual List<Discos> Discos { get; set; }
         public Factura()
         {
-            this.Discos = new List<DetalleFactura>();
+            this.Discos = new List<Discos>();
 
         }
         public Factura(int idfactura,int idcliente,DateTime fechaventa )
@@ -28,7 +34,7 @@ namespace Entidades
             this.IdFactura = idfactura;
             this.IdCliente = idcliente;
             this.FechaVenta = fechaventa;
-            this.Discos = new List<DetalleFactura>();    
+            this.Discos = new List<Discos>();    
         }
     }
 }

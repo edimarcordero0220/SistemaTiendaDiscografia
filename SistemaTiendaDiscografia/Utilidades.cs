@@ -14,6 +14,12 @@ namespace SistemaTiendaDiscografia
             int.TryParse(texto, out numero);
             return numero;
         }
+        public static int TOINT(string nombre)
+        {
+            int numero;
+            int.TryParse(nombre, out numero);
+            return numero;
+        }
         internal static int ToInt()
         {
             try

@@ -12,7 +12,7 @@ namespace BLL
     {
         
 
-        public static void Insertar(DetalleFactura d)
+        public static void Insertar(Discos d)
         {
             try
             {
@@ -25,14 +25,14 @@ namespace BLL
                 throw ex;
             }
         }
-        public static void Eliminar(DetalleFactura d)
+        public static void Eliminar(Discos d)
         {
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
-            DetalleFactura disc = new DetalleFactura();
+            Discos disc = new Discos();
             db.disco.Remove(disc);
             db.SaveChanges();
         }
-        public static DetalleFactura Buscar(int Id)
+        public static Discos Buscar(int Id)
         {
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
             return db.disco.Find(Id);
@@ -40,7 +40,7 @@ namespace BLL
         public static void Eliminar(int v)
         {
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
-            DetalleFactura dis = db.disco.Find(v);
+            Discos dis = db.disco.Find(v);
             try
             {
                 db.disco.Remove(dis);
@@ -52,52 +52,52 @@ namespace BLL
                 throw ex;
             }
         }
-        public static List<DetalleFactura> GetLista()
+        public static List<Discos> GetLista()
         {
-            List<DetalleFactura> lista = new List<DetalleFactura>();
+            List<Discos> lista = new List<Discos>();
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
             lista = db.disco.ToList();
             return lista;
 
         }
-        public static List<DetalleFactura> GetListaId(int discoId)
+        public static List<Discos> GetListaId(int discoId)
         {
-            List<DetalleFactura> lista = new List<DetalleFactura>();
+            List<Discos> lista = new List<Discos>();
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
             lista = db.disco.Where(p => p.IdDisco == discoId).ToList();
             return lista;
         }
-        public static List<DetalleFactura> GetListaNombre(string nombre)
+        public static List<Discos> GetListaNombre(string nombre)
         {
-            List<DetalleFactura> lista = new List<DetalleFactura>();
+            List<Discos> lista = new List<Discos>();
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
             lista = db.disco.Where(p => p.NombreDisco == nombre).ToList();
             return lista;
         }
-        public static List<DetalleFactura> GetArtista(string artista)
+        public static List<Discos> GetArtista(string artista)
         {
-            List<DetalleFactura> lista = new List<DetalleFactura>();
+            List<Discos> lista = new List<Discos>();
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
             lista = db.disco.Where(p => p.Artista == artista).ToList();
             return lista;
         }
-        public static List<DetalleFactura> GetProductor(string productor)
+        public static List<Discos> GetProductor(string productor)
         {
-            List<DetalleFactura> lista = new List<DetalleFactura>();
+            List<Discos> lista = new List<Discos>();
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
             lista = db.disco.Where(p => p.Productor == productor).ToList();
             return lista;
         }
-        public static List<DetalleFactura> GetSello(string sello)
+        public static List<Discos> GetSello(string sello)
         {
-            List<DetalleFactura> lista = new List<DetalleFactura>();
+            List<Discos> lista = new List<Discos>();
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
             lista = db.disco.Where(p => p.SelloDiscografico == sello).ToList();
             return lista;
         }
-        public static List<DetalleFactura> GetFecha( DateTime Desde, DateTime Hasta)
+        public static List<Discos> GetFecha( DateTime Desde, DateTime Hasta)
         {
-            List<DetalleFactura> lista = new List<DetalleFactura>();
+            List<Discos> lista = new List<Discos>();
             SistemaDiscograficoDb db = new SistemaDiscograficoDb();
             lista = db.disco.Where(p => p.FechaDeLanzamiento >= Desde && p.FechaDeLanzamiento<=Hasta).ToList();
             return lista;
