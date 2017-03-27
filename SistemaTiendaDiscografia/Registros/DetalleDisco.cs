@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using BLL;
+using SistemaTiendaDiscografia.Registros;
 namespace SistemaTiendaDiscografia.Registros
 {
     public partial class DetalleDisco : Form
@@ -21,6 +23,7 @@ namespace SistemaTiendaDiscografia.Registros
            d.Cancion= CanciontextBox.Text;
             d.DuracionDeLaCancion = DuraciontextBox.Text;
             d.FechaCreacion = dateTimePicker.Value;
+            
 
         }
         public void LlenarCombo()
@@ -28,15 +31,26 @@ namespace SistemaTiendaDiscografia.Registros
             DiscocomboBox.DataSource = BLL.DiscosBLL.GetLista();
             DiscocomboBox.DisplayMember = "NombreDisco";
             DiscocomboBox.ValueMember = "IdDisco";
+       
+
         }
         
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
+           
+            DetallesDeDiscos detalle = new DetallesDeDiscos();
+            
+            LlenarClase(detalle);
+         
+           DetallesDeDiscosBLL.Insertar(detalle);
+            
 
         }
 
         private void DetalleDisco_Load(object sender, EventArgs e)
         {
+            
+
             LlenarCombo();
             DataGridViewTextBoxColumn c = new DataGridViewTextBoxColumn();
             c.HeaderText = "Cancion/es";
@@ -51,7 +65,10 @@ namespace SistemaTiendaDiscografia.Registros
 
             dataGridView.Columns.Add(c);
             dataGridView.Columns.Add(d);
-         
+              
+
+           
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -75,6 +92,11 @@ namespace SistemaTiendaDiscografia.Registros
             {
                 dataGridView.Rows.Add(CanciontextBox.Text, DuraciontextBox.Text);
             }
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

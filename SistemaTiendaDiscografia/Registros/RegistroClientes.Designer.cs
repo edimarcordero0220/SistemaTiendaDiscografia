@@ -194,6 +194,7 @@
             this.FechaCreaciondateTimePicker.Name = "FechaCreaciondateTimePicker";
             this.FechaCreaciondateTimePicker.Size = new System.Drawing.Size(81, 20);
             this.FechaCreaciondateTimePicker.TabIndex = 29;
+            this.FechaCreaciondateTimePicker.ValueChanged += new System.EventHandler(this.FechaCreaciondateTimePicker_ValueChanged);
             // 
             // RegistroClientes
             // 

@@ -82,6 +82,12 @@
     <Compile Include="Consultas\ReporteViewerClientes.Designer.cs">
       <DependentUpon>ReporteViewerClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\ReporteViewerDiscos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ReporteViewerDiscos.Designer.cs">
+      <DependentUpon>ReporteViewerDiscos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ReporteViewerUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="Registros\DetalleDisco.Designer.cs">
       <DependentUpon>DetalleDisco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\DetalleFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\DetalleFactura.Designer.cs">
+      <DependentUpon>DetalleFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\RegistroClientes.cs">
       <SubType>Form</SubType>
@@ -154,11 +166,17 @@
     <EmbeddedResource Include="Consultas\ReporteViewerClientes.resx">
       <DependentUpon>ReporteViewerClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ReporteViewerDiscos.resx">
+      <DependentUpon>ReporteViewerDiscos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ReporteViewerUsuarios.resx">
       <DependentUpon>ReporteViewerUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\DetalleDisco.resx">
       <DependentUpon>DetalleDisco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\DetalleFactura.resx">
+      <DependentUpon>DetalleFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\RegistroClientes.resx">
       <DependentUpon>RegistroClientes.cs</DependentUpon>

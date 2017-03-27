@@ -108,5 +108,10 @@ namespace SistemaTiendaDiscografia.Registros
                 errorProvider.Clear();
             }*/
         }
+
+        private void FechaCreaciondateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

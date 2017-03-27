@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.FiltrarcomboBox = new System.Windows.Forms.ComboBox();
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -38,7 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Imprimirbutton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.FiltrardataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Buscarbutton
@@ -49,6 +52,7 @@
             this.Buscarbutton.TabIndex = 0;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // FiltrarcomboBox
             // 
@@ -124,6 +128,11 @@
             this.Imprimirbutton.TabIndex = 9;
             this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ConsultaDiscos
             // 
@@ -142,7 +151,9 @@
             this.Controls.Add(this.Buscarbutton);
             this.Name = "ConsultaDiscos";
             this.Text = "ConsultaDiscos";
+            this.Load += new System.EventHandler(this.ConsultaDiscos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FiltrardataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +171,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Imprimirbutton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

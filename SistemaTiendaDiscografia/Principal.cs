@@ -53,5 +53,19 @@ namespace SistemaTiendaDiscografia
             cu.MdiParent = this.MdiParent;
             cu.Show();
         }
+
+        private void discosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaDiscos cu = new ConsultaDiscos();
+            cu.MdiParent = this.MdiParent;
+            cu.Show();
+        }
+
+        private void detalleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Factura cu = new Factura();
+            cu.MdiParent = this.MdiParent;
+            cu.Show();
+        }
     }
 }
