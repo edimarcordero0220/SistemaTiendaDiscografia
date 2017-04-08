@@ -153,6 +153,7 @@
             this.IdtextBox.Name = "IdtextBox";
             this.IdtextBox.Size = new System.Drawing.Size(42, 20);
             this.IdtextBox.TabIndex = 16;
+            this.IdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IdtextBox_KeyPress);
             // 
             // label1
             // 

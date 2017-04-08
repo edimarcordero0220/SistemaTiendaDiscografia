@@ -17,6 +17,7 @@ namespace SistemaTiendaDiscografia
         public RegistroUsuario()
         {
             InitializeComponent();
+
         }
         Utilidades ut = new Utilidades();
         private void LlenarClase(Usuarios u)
@@ -45,6 +46,7 @@ namespace SistemaTiendaDiscografia
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             BuscarUsuario(UsuariosBLL.Buscar(String(IdtextBox.Text)));
+            ValidarBuscar();
         }
         public int String(string texto)
         {
@@ -74,19 +76,24 @@ namespace SistemaTiendaDiscografia
         }
         public void BuscarUsuario(Usuarios usuario)
         {
+            
             if (IdtextBox.Text == "")
             {
                 MessageBox.Show("Para hacer una busqueda de Usuario debe ingresar el ID");
             }
             else
             {
-               
+                
+
                 IdtextBox.Text = usuario.UsuarioId.ToString();
                 NombretextBox.Text = usuario.NombreUsuario.ToString();
                 ConfirmarContrasenatextBox.Text = usuario.Contrasena.ToString();
                 ContrasenatextBox.Text = usuario.Contrasena.ToString();
                 
+
+
             }
+           
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
@@ -163,6 +170,22 @@ namespace SistemaTiendaDiscografia
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void IdtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

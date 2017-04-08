@@ -112,6 +112,7 @@
             // ArtistatextBox
             // 
             this.ArtistatextBox.Location = new System.Drawing.Point(106, 111);
+            this.ArtistatextBox.MaxLength = 20;
             this.ArtistatextBox.Name = "ArtistatextBox";
             this.ArtistatextBox.Size = new System.Drawing.Size(110, 20);
             this.ArtistatextBox.TabIndex = 8;
@@ -188,6 +189,7 @@
             // NombretextBox
             // 
             this.NombretextBox.Location = new System.Drawing.Point(108, 72);
+            this.NombretextBox.MaxLength = 19;
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(110, 20);
             this.NombretextBox.TabIndex = 9;

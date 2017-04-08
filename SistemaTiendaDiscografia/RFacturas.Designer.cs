@@ -70,6 +70,7 @@
             this.FacturaIdtextBox.Name = "FacturaIdtextBox";
             this.FacturaIdtextBox.Size = new System.Drawing.Size(80, 20);
             this.FacturaIdtextBox.TabIndex = 0;
+            this.FacturaIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FacturaIdtextBox_KeyPress);
             // 
             // Buscarbutton
             // 
@@ -139,6 +140,7 @@
             this.IdDiscotextBox.Name = "IdDiscotextBox";
             this.IdDiscotextBox.Size = new System.Drawing.Size(80, 20);
             this.IdDiscotextBox.TabIndex = 11;
+            this.IdDiscotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IdDiscotextBox_KeyPress);
             // 
             // NombretextBox
             // 
@@ -153,6 +155,7 @@
             this.ClienteIdtextBox.Name = "ClienteIdtextBox";
             this.ClienteIdtextBox.Size = new System.Drawing.Size(80, 20);
             this.ClienteIdtextBox.TabIndex = 13;
+            this.ClienteIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClienteIdtextBox_KeyPress);
             // 
             // Nuevobutton
             // 
@@ -214,9 +217,11 @@
             // PreciotextBox
             // 
             this.PreciotextBox.Location = new System.Drawing.Point(534, 18);
+            this.PreciotextBox.MaxLength = 3;
             this.PreciotextBox.Name = "PreciotextBox";
             this.PreciotextBox.Size = new System.Drawing.Size(80, 20);
             this.PreciotextBox.TabIndex = 21;
+            this.PreciotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciotextBox_KeyPress);
             // 
             // label2
             // 
@@ -244,6 +249,7 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(668, 181);
             this.dataGridView.TabIndex = 0;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // Eliminarbutton
             // 

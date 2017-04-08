@@ -27,7 +27,7 @@ namespace SistemaTiendaDiscografia
 
         public void LlenarClase(Factura c)
         {
-            
+
             c.IdFactura = Utilidades.TOINT(FacturaIdtextBox.Text);
             c.IdCliente = Utilidades.TOINT(ClienteIdtextBox.Text);
 
@@ -35,7 +35,7 @@ namespace SistemaTiendaDiscografia
             c.Nombre = NombretextBox.Text;
             c.NombreDisco = DescripcionDiscotextBox.Text;
             c.Precio = Convert.ToDecimal(PreciotextBox.Text);
-            
+
             //c.Precio = Utilidades.TOINT(PreciotextBox.Text);
 
         }
@@ -47,7 +47,7 @@ namespace SistemaTiendaDiscografia
         {
             ClienteIdtextBox.Text = cliente.IdCliente.ToString();
             NombretextBox.Text = cliente.NombreCliente;
-           
+
         }
         public void BuscarDisco(Discos disco)
         {
@@ -61,7 +61,7 @@ namespace SistemaTiendaDiscografia
             int.TryParse(texto, out numero);
             return numero;
         }
-        
+
 
         private void BuscarClienteButton_Click(object sender, EventArgs e)
         {
@@ -93,10 +93,10 @@ namespace SistemaTiendaDiscografia
             {
                 dataGridView.Rows.Add(IdDiscotextBox.Text, DescripcionDiscotextBox.Text, PreciotextBox.Text);
             }
-            
-            
-          
-          
+
+
+
+
         }
 
         private void Factura_Load(object sender, EventArgs e)
@@ -124,12 +124,12 @@ namespace SistemaTiendaDiscografia
 
         }
         private void LlenarUsuario()
-         {
-             List<Usuarios> lista = BLL.UsuariosBLL.GetLista();
-             ModificadorcomboBox.DataSource = lista;
-             ModificadorcomboBox.DisplayMember = "NombreUsuario";
-             ModificadorcomboBox.ValueMember = "UsuarioId";
-         }
+        {
+            List<Usuarios> lista = BLL.UsuariosBLL.GetLista();
+            ModificadorcomboBox.DataSource = lista;
+            ModificadorcomboBox.DisplayMember = "NombreUsuario";
+            ModificadorcomboBox.ValueMember = "UsuarioId";
+        }
 
         /*private void CalcularTotal()
         {
@@ -165,26 +165,26 @@ namespace SistemaTiendaDiscografia
         }
         public void BuscarFactura(Entidades.Factura factura)
         {
-            
-                FacturaIdtextBox.Text = factura.IdFactura.ToString();
-                NombretextBox.Text = factura.Nombre;
-                DescripcionDiscotextBox.Text = factura.NombreDisco;
+
+            FacturaIdtextBox.Text = factura.IdFactura.ToString();
+            NombretextBox.Text = factura.Nombre;
+            DescripcionDiscotextBox.Text = factura.NombreDisco;
             IdDiscotextBox.Text = factura.IdCliente.ToString();
-            
+
 
             FechadateTimePicker.Value = factura.FechaVenta;
             LlenarGrid(factura);
-            
+
 
 
         }
         private void LlenarGrid(Factura factura)
         {
-           /* dataGridView.DataSource = null;
-            dataGridView.DataSource = factura.Detalle.ToList();
-            this.dataGridView.Columns["FacturaServicioId"].Visible = false;
-            this.dataGridView.Columns["FacturaId"].Visible = false;
-            this.dataGridView.Columns["Servicio"].Visible = false;*/
+            /* dataGridView.DataSource = null;
+             dataGridView.DataSource = factura.ToList();
+             this.dataGridView.Columns["FacturaServicioId"].Visible = false;
+             this.dataGridView.Columns["FacturaId"].Visible = false;
+             this.dataGridView.Columns["Servicio"].Visible = false;*/
 
         }
 
@@ -198,13 +198,92 @@ namespace SistemaTiendaDiscografia
 
         private void eliminarfilabutton_Click(object sender, EventArgs e)
         {
-            if(dataGridView.DataSource != null)
+            if (dataGridView.DataSource != null)
             {
                 MessageBox.Show("No ha selecionado una fila ");
-            }else
+            }
+            else
             {
                 dataGridView.Rows.RemoveAt(dataGridView.CurrentRow.Index);
             }
         }
+        public bool isCaracterValido(Char c)
+        {
+            if ((c >= '0' && c <= '9'))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void PreciotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void FacturaIdtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ClienteIdtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void IdDiscotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
+
