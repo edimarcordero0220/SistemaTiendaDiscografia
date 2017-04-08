@@ -91,7 +91,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Guardarbutton.Location = new System.Drawing.Point(90, 352);
+            this.Guardarbutton.Location = new System.Drawing.Point(76, 283);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 36);
             this.Guardarbutton.TabIndex = 0;
@@ -120,7 +120,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Eliminarbutton.Location = new System.Drawing.Point(180, 352);
+            this.Eliminarbutton.Location = new System.Drawing.Point(166, 283);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 36);
             this.Eliminarbutton.TabIndex = 13;
@@ -141,7 +141,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Nuevobutton.Location = new System.Drawing.Point(277, 352);
+            this.Nuevobutton.Location = new System.Drawing.Point(263, 283);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 36);
             this.Nuevobutton.TabIndex = 14;
@@ -218,6 +218,7 @@
             this.IdtextBox.Size = new System.Drawing.Size(45, 20);
             this.IdtextBox.TabIndex = 2;
             this.IdtextBox.TextChanged += new System.EventHandler(this.IdtextBox_TextChanged);
+            this.IdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IdtextBox_KeyPress);
             // 
             // RegistrosDiscos
             // 
@@ -226,7 +227,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = global::SistemaTiendaDiscografia.Properties.Resources.j;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(422, 475);
+            this.ClientSize = new System.Drawing.Size(422, 350);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.FechaCreaciondateTimePicker);
             this.Controls.Add(this.Nuevobutton);

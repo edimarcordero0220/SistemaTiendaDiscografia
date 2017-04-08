@@ -54,7 +54,7 @@ namespace SistemaTiendaDiscografia.Consultas
                 }
                 ConsultadataGridView.DataSource = lista;
             }
-            if (FiltrarcomboBox.SelectedIndex == 2)
+          /*  if (FiltrarcomboBox.SelectedIndex == 2)
             {
                 if (!String.IsNullOrEmpty(filtrartextBox.Text))
                 {
@@ -65,7 +65,7 @@ namespace SistemaTiendaDiscografia.Consultas
                     lista = UsuariosBLL.GetLista();
                 }
                 ConsultadataGridView.DataSource = lista;
-            }
+            }*/
         }
         private bool ValidarConsulta()
         {
@@ -79,11 +79,7 @@ namespace SistemaTiendaDiscografia.Consultas
                 MessageBox.Show("No existe registro con este campo de filtro intertar con otro por favor");
                 return false;
             }
-            if(FiltrarcomboBox.SelectedIndex == 2 && UsuariosBLL.GetContrasena(filtrartextBox.Text).Count == 0)
-            {
-                MessageBox.Show("No existe registro con este campo de filtro intertar con otro por favor");
-                return false;
-            }
+            
             errorProvider.Clear();
             return true;
         }
@@ -91,7 +87,7 @@ namespace SistemaTiendaDiscografia.Consultas
         {
             FiltrarcomboBox.Items.Insert(0, "UsuarioId");
             FiltrarcomboBox.Items.Insert(1, "Nombre");
-            FiltrarcomboBox.Items.Insert(2, "Contraseña");
+            //FiltrarcomboBox.Items.Insert(2, "Contraseña");
             FiltrarcomboBox.DataSource = FiltrarcomboBox.Items;
             FiltrarcomboBox.DisplayMember = "Id";
             ConsultadataGridView.DataSource = UsuariosBLL.GetLista();

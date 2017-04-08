@@ -52,6 +52,9 @@
             this.BuscarClienteButton = new System.Windows.Forms.Button();
             this.TotaltextBox = new System.Windows.Forms.TextBox();
             this.eliminarfilabutton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ModificadorcomboBox = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -148,7 +151,7 @@
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(18, 365);
+            this.Nuevobutton.Location = new System.Drawing.Point(256, 339);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 23);
             this.Nuevobutton.TabIndex = 14;
@@ -169,7 +172,7 @@
             // FechadateTimePicker
             // 
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(666, 6);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(378, 5);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(97, 20);
             this.FechadateTimePicker.TabIndex = 16;
@@ -229,7 +232,7 @@
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(180, 365);
+            this.Eliminarbutton.Location = new System.Drawing.Point(418, 339);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 23);
             this.Eliminarbutton.TabIndex = 18;
@@ -239,7 +242,7 @@
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(99, 365);
+            this.Guardarbutton.Location = new System.Drawing.Point(337, 339);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 23);
             this.Guardarbutton.TabIndex = 19;
@@ -274,12 +277,41 @@
             this.eliminarfilabutton.UseVisualStyleBackColor = true;
             this.eliminarfilabutton.Click += new System.EventHandler(this.eliminarfilabutton_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(335, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Fecha";
+            // 
+            // ModificadorcomboBox
+            // 
+            this.ModificadorcomboBox.FormattingEnabled = true;
+            this.ModificadorcomboBox.Location = new System.Drawing.Point(627, 6);
+            this.ModificadorcomboBox.Name = "ModificadorcomboBox";
+            this.ModificadorcomboBox.Size = new System.Drawing.Size(121, 21);
+            this.ModificadorcomboBox.TabIndex = 24;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(520, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 13);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Usuario Modificador";
+            // 
             // RFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(766, 421);
+            this.ClientSize = new System.Drawing.Size(766, 378);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.ModificadorcomboBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.TotaltextBox);
             this.Controls.Add(this.BuscarClienteButton);
             this.Controls.Add(this.Guardarbutton);
@@ -331,5 +363,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TotaltextBox;
         private System.Windows.Forms.Button eliminarfilabutton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox ModificadorcomboBox;
+        private System.Windows.Forms.Label label6;
     }
 }

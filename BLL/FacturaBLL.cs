@@ -52,5 +52,10 @@ namespace BLL
                 throw ex;
             }
         }
+
+        public static Factura Buscar(Func<object, object> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

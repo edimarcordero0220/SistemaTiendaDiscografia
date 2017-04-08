@@ -45,7 +45,7 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Buscarbutton.Location = new System.Drawing.Point(227, 60);
+            this.Buscarbutton.Location = new System.Drawing.Point(111, 25);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(60, 31);
             this.Buscarbutton.TabIndex = 0;
@@ -56,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 69);
+            this.label1.Location = new System.Drawing.Point(27, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             // ContrasenatextBox
             // 
-            this.ContrasenatextBox.Location = new System.Drawing.Point(368, 62);
+            this.ContrasenatextBox.Location = new System.Drawing.Point(252, 27);
             this.ContrasenatextBox.Name = "ContrasenatextBox";
             this.ContrasenatextBox.PasswordChar = '*';
             this.ContrasenatextBox.Size = new System.Drawing.Size(108, 20);
@@ -75,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 115);
+            this.label2.Location = new System.Drawing.Point(27, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 3;
@@ -85,7 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(301, 66);
+            this.label3.Location = new System.Drawing.Point(185, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 4;
@@ -95,7 +95,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(308, 110);
+            this.label4.Location = new System.Drawing.Point(192, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             // IdtextBox
             // 
-            this.IdtextBox.Location = new System.Drawing.Point(187, 66);
+            this.IdtextBox.Location = new System.Drawing.Point(71, 31);
             this.IdtextBox.Name = "IdtextBox";
             this.IdtextBox.Size = new System.Drawing.Size(34, 20);
             this.IdtextBox.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // ConfirmarContrasenatextBox
             // 
-            this.ConfirmarContrasenatextBox.Location = new System.Drawing.Point(368, 107);
+            this.ConfirmarContrasenatextBox.Location = new System.Drawing.Point(252, 72);
             this.ConfirmarContrasenatextBox.Name = "ConfirmarContrasenatextBox";
             this.ConfirmarContrasenatextBox.PasswordChar = '*';
             this.ConfirmarContrasenatextBox.Size = new System.Drawing.Size(108, 20);
@@ -121,7 +121,7 @@
             // 
             // NombretextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(187, 107);
+            this.NombretextBox.Location = new System.Drawing.Point(71, 72);
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(100, 20);
             this.NombretextBox.TabIndex = 8;
@@ -130,7 +130,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Nuevobutton.Location = new System.Drawing.Point(346, 230);
+            this.Nuevobutton.Location = new System.Drawing.Point(262, 131);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(95, 31);
             this.Nuevobutton.TabIndex = 9;
@@ -141,7 +141,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Eliminarbutton.Location = new System.Drawing.Point(245, 230);
+            this.Eliminarbutton.Location = new System.Drawing.Point(161, 131);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(95, 33);
             this.Eliminarbutton.TabIndex = 10;
@@ -152,7 +152,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Guardarbutton.Location = new System.Drawing.Point(155, 231);
+            this.Guardarbutton.Location = new System.Drawing.Point(71, 132);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(84, 33);
             this.Guardarbutton.TabIndex = 11;
@@ -167,7 +167,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = global::SistemaTiendaDiscografia.Properties.Resources.j;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(589, 299);
+            this.ClientSize = new System.Drawing.Size(381, 219);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Nuevobutton);

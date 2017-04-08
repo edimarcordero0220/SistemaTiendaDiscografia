@@ -22,7 +22,7 @@ namespace SistemaTiendaDiscografia
         public RFacturas()
         {
             InitializeComponent();
-            //LlenarComboCliente();
+            LlenarUsuario();
         }
 
         public void LlenarClase(Factura c)
@@ -65,12 +65,26 @@ namespace SistemaTiendaDiscografia
 
         private void BuscarClienteButton_Click(object sender, EventArgs e)
         {
-            BuscarClientes(ClientesBLL.Buscar(String(ClienteIdtextBox.Text)));
+            if (ClienteIdtextBox.Text == "")
+            {
+                MessageBox.Show("Para Realizar una busqueda debe llenar el campo Cliente Id");
+            }
+            else
+            {
+                BuscarClientes(ClientesBLL.Buscar(String(ClienteIdtextBox.Text)));
+            }
         }
 
         private void BuscarDiscbutton_Click(object sender, EventArgs e)
         {
-            BuscarDisco(DiscosBLL.Buscar(String(IdDiscotextBox.Text)));
+            if (IdDiscotextBox.Text == "")
+            {
+                MessageBox.Show("Favor Digite el Id del disco que desea buscar");
+            }
+            else
+            {
+                BuscarDisco(DiscosBLL.Buscar(String(IdDiscotextBox.Text)));
+            }
         }
 
         private void Agregarbutton_Click(object sender, EventArgs e)
@@ -109,13 +123,13 @@ namespace SistemaTiendaDiscografia
 
 
         }
-        /* private void LlenarComboCliente()
+        private void LlenarUsuario()
          {
-             List<Clientes> lista = BLL.ClientesBLL.GetLista();
-             ClientecomboBox.DataSource = lista;
-             ClientecomboBox.DisplayMember = "NombreCliente";
-             ClientecomboBox.ValueMember = "IdCliente";
-         }*/
+             List<Usuarios> lista = BLL.UsuariosBLL.GetLista();
+             ModificadorcomboBox.DataSource = lista;
+             ModificadorcomboBox.DisplayMember = "NombreUsuario";
+             ModificadorcomboBox.ValueMember = "UsuarioId";
+         }
 
         /*private void CalcularTotal()
         {
@@ -139,7 +153,15 @@ namespace SistemaTiendaDiscografia
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            BuscarFactura(FacturaBLL.Buscar(String(FacturaIdtextBox.Text)));
+            if (FacturaIdtextBox.Text == "")
+            {
+                MessageBox.Show("Para Buscar una Factura, Favor Llenar el Campo Id Factura");
+            }
+            else
+            {
+
+                BuscarFactura(FacturaBLL.Buscar(String(FacturaIdtextBox.Text)));
+            }
         }
         public void BuscarFactura(Entidades.Factura factura)
         {

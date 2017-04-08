@@ -78,12 +78,19 @@ namespace SistemaTiendaDiscografia.Registros
         }
         public void BuscarClientes(Clientes cliente)
         {
-            IdtextBox.Text = cliente.IdCliente.ToString();
-            NombreCliente.Text = cliente.NombreCliente;
-            ApellidotextBox.Text = cliente.ApellidoCliente;
-            DirecciontextBox.Text = cliente.DireccionCliente;
-            CedulatextBox.Text = cliente.CedulaCliente;
-            FechaCreaciondateTimePicker.Value = cliente.FechaCreacion;
+            if (IdtextBox.Text == "")
+            {
+                MessageBox.Show("Favor ingrese el Id Para Realizar una busqueda de Disco");
+            }
+            else
+            {
+                IdtextBox.Text = cliente.IdCliente.ToString();
+                NombreCliente.Text = cliente.NombreCliente;
+                ApellidotextBox.Text = cliente.ApellidoCliente;
+                DirecciontextBox.Text = cliente.DireccionCliente;
+                CedulatextBox.Text = cliente.CedulaCliente;
+                FechaCreaciondateTimePicker.Value = cliente.FechaCreacion;
+            }
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)

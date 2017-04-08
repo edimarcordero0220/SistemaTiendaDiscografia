@@ -52,7 +52,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(264, 114);
+            this.label5.Location = new System.Drawing.Point(231, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 27;
@@ -68,7 +68,7 @@
             // 
             // ApellidotextBox
             // 
-            this.ApellidotextBox.Location = new System.Drawing.Point(310, 74);
+            this.ApellidotextBox.Location = new System.Drawing.Point(277, 74);
             this.ApellidotextBox.Name = "ApellidotextBox";
             this.ApellidotextBox.Size = new System.Drawing.Size(132, 20);
             this.ApellidotextBox.TabIndex = 25;
@@ -82,7 +82,7 @@
             // 
             // CedulatextBox
             // 
-            this.CedulatextBox.Location = new System.Drawing.Point(310, 107);
+            this.CedulatextBox.Location = new System.Drawing.Point(277, 107);
             this.CedulatextBox.Name = "CedulatextBox";
             this.CedulatextBox.Size = new System.Drawing.Size(132, 20);
             this.CedulatextBox.TabIndex = 23;
@@ -108,7 +108,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(260, 74);
+            this.label2.Location = new System.Drawing.Point(227, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 20;
@@ -117,7 +117,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Eliminarbutton.Location = new System.Drawing.Point(206, 262);
+            this.Eliminarbutton.Location = new System.Drawing.Point(202, 198);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 36);
             this.Eliminarbutton.TabIndex = 19;
@@ -139,7 +139,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Nuevobutton.Location = new System.Drawing.Point(310, 262);
+            this.Nuevobutton.Location = new System.Drawing.Point(306, 198);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 36);
             this.Nuevobutton.TabIndex = 17;
@@ -166,7 +166,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Guardarbutton.Location = new System.Drawing.Point(106, 262);
+            this.Guardarbutton.Location = new System.Drawing.Point(102, 198);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 36);
             this.Guardarbutton.TabIndex = 14;
@@ -181,7 +181,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(380, 18);
+            this.label6.Location = new System.Drawing.Point(282, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 28;
@@ -190,7 +190,7 @@
             // FechaCreaciondateTimePicker
             // 
             this.FechaCreaciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaCreaciondateTimePicker.Location = new System.Drawing.Point(426, 12);
+            this.FechaCreaciondateTimePicker.Location = new System.Drawing.Point(328, 12);
             this.FechaCreaciondateTimePicker.Name = "FechaCreaciondateTimePicker";
             this.FechaCreaciondateTimePicker.Size = new System.Drawing.Size(81, 20);
             this.FechaCreaciondateTimePicker.TabIndex = 29;
@@ -203,7 +203,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = global::SistemaTiendaDiscografia.Properties.Resources.j;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(519, 376);
+            this.ClientSize = new System.Drawing.Size(428, 254);
             this.Controls.Add(this.FechaCreaciondateTimePicker);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

@@ -187,5 +187,11 @@ namespace SistemaTiendaDiscografia.Registros
         {
 
         }
+
+        private void IdtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+
+        }
     }
 }
