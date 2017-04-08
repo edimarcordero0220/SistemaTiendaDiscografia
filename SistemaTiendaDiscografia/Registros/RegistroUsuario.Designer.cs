@@ -45,9 +45,9 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Buscarbutton.Location = new System.Drawing.Point(187, 232);
+            this.Buscarbutton.Location = new System.Drawing.Point(227, 60);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(88, 31);
+            this.Buscarbutton.Size = new System.Drawing.Size(60, 31);
             this.Buscarbutton.TabIndex = 0;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
@@ -67,6 +67,7 @@
             // 
             this.ContrasenatextBox.Location = new System.Drawing.Point(368, 62);
             this.ContrasenatextBox.Name = "ContrasenatextBox";
+            this.ContrasenatextBox.PasswordChar = '*';
             this.ContrasenatextBox.Size = new System.Drawing.Size(108, 20);
             this.ContrasenatextBox.TabIndex = 2;
             this.ContrasenatextBox.TextChanged += new System.EventHandler(this.ContrasenatextBox_TextChanged);
@@ -113,6 +114,7 @@
             // 
             this.ConfirmarContrasenatextBox.Location = new System.Drawing.Point(368, 107);
             this.ConfirmarContrasenatextBox.Name = "ConfirmarContrasenatextBox";
+            this.ConfirmarContrasenatextBox.PasswordChar = '*';
             this.ConfirmarContrasenatextBox.Size = new System.Drawing.Size(108, 20);
             this.ConfirmarContrasenatextBox.TabIndex = 7;
             this.ConfirmarContrasenatextBox.TextChanged += new System.EventHandler(this.ConfirmarContrasenatextBox_TextChanged);
@@ -128,7 +130,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Nuevobutton.Location = new System.Drawing.Point(408, 232);
+            this.Nuevobutton.Location = new System.Drawing.Point(346, 230);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(95, 31);
             this.Nuevobutton.TabIndex = 9;
@@ -139,7 +141,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Eliminarbutton.Location = new System.Drawing.Point(297, 232);
+            this.Eliminarbutton.Location = new System.Drawing.Point(245, 230);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(95, 33);
             this.Eliminarbutton.TabIndex = 10;
@@ -150,9 +152,9 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Guardarbutton.Location = new System.Drawing.Point(75, 232);
+            this.Guardarbutton.Location = new System.Drawing.Point(155, 231);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(85, 33);
+            this.Guardarbutton.Size = new System.Drawing.Size(84, 33);
             this.Guardarbutton.TabIndex = 11;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;

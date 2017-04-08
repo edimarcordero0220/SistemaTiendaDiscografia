@@ -18,6 +18,8 @@ namespace SistemaTiendaDiscografia.Registros
         {
             InitializeComponent();
         }
+       
+
         Utilidades ut = new Utilidades();
         public void LlenarClase(Entidades.Discos d)
         {
@@ -30,17 +32,31 @@ namespace SistemaTiendaDiscografia.Registros
         }
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            Entidades.Discos discos = new Entidades.Discos();
-            LlenarClase(discos);
-            DiscosBLL.Insertar(discos);
-            MessageBox.Show("Guardado");
+            if (NombretextBox.Text == "" || ArtistatextBox.Text == "" || ProductortextBox.Text == "" || SellotextBox.Text == "")
+            {
+                MessageBox.Show("Por favor llenar Todos los campos");
+            }
+            else
+            {
+                Entidades.Discos discos = new Entidades.Discos();
+                LlenarClase(discos);
+                DiscosBLL.Insertar(discos);
+                MessageBox.Show("Guardado");
+            }
 
         }
         
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            BuscarDiscos(DiscosBLL.Buscar(String(IdtextBox.Text)));
+            if (IdtextBox.Text == "")
+            {
+                MessageBox.Show("Para Eliminar Un Disco Debes Ingresar el Id");
+            }
+            else
+            {
+                BuscarDiscos(DiscosBLL.Buscar(String(IdtextBox.Text)));
+            }
         }
         public int String(string texto)
         {
@@ -81,9 +97,15 @@ namespace SistemaTiendaDiscografia.Registros
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-
-            DiscosBLL.Eliminar(ut.String(IdtextBox.Text));
-            MessageBox.Show("Eliminado");
+            if (IdtextBox.Text == "")
+            {
+                MessageBox.Show("Por favor ingrese Id");
+            }
+            else
+            {
+                DiscosBLL.Eliminar(ut.String(IdtextBox.Text));
+                MessageBox.Show("Eliminado");
+            }
         }
 
         private void RegistrosDiscos_Load(object sender, EventArgs e)
@@ -158,8 +180,12 @@ namespace SistemaTiendaDiscografia.Registros
 
         private void Clickbutton_Click(object sender, EventArgs e)
         {
-            DetalleDisco d = new DetalleDisco();
-            d.Show();
+            
+        }
+
+        private void Agregarbutton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

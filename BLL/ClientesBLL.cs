@@ -103,7 +103,9 @@ namespace BLL
             lista = db.Clientes.Where(p => p.ApellidoCliente == Apellido).ToList();
             return lista;
         }
-       
+
+      
+
 
     }
 }

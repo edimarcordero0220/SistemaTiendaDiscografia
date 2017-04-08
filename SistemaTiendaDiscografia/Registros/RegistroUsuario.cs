@@ -27,10 +27,18 @@ namespace SistemaTiendaDiscografia
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            Usuarios usuario = new Usuarios();
-            LlenarClase(usuario);
-            UsuariosBLL.Insertar(usuario);
-            MessageBox.Show("Registro Exitoso!!!");
+            if (NombretextBox.Text =="" || ContrasenatextBox.Text == "" || ConfirmarContrasenatextBox.Text=="" )
+            {
+                MessageBox.Show("Por favor Llenar Todos Los campos");
+            }else
+            {
+                Usuarios usuario = new Usuarios();
+                LlenarClase(usuario);
+                UsuariosBLL.Insertar(usuario);
+                MessageBox.Show("Registro Exitoso!!!");
+
+            }
+            
 
         }
 
@@ -83,8 +91,15 @@ namespace SistemaTiendaDiscografia
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            UsuariosBLL.Eliminar(ut.String(IdtextBox.Text));
-            MessageBox.Show("Eliminado");
+            if (IdtextBox.Text == "")
+            {
+                MessageBox.Show("Por favor ingrese Id");
+            }
+            else
+            {
+                UsuariosBLL.Eliminar(ut.String(IdtextBox.Text));
+                MessageBox.Show("Eliminado");
+            }
         }
 
         private bool ValidarBuscar()

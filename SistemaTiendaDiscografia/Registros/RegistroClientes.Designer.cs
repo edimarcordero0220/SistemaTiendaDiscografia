@@ -117,7 +117,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Eliminarbutton.Location = new System.Drawing.Point(166, 304);
+            this.Eliminarbutton.Location = new System.Drawing.Point(206, 262);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 36);
             this.Eliminarbutton.TabIndex = 19;
@@ -128,7 +128,7 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Buscarbutton.Location = new System.Drawing.Point(261, 304);
+            this.Buscarbutton.Location = new System.Drawing.Point(133, 51);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 36);
             this.Buscarbutton.TabIndex = 18;
@@ -139,7 +139,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Nuevobutton.Location = new System.Drawing.Point(351, 304);
+            this.Nuevobutton.Location = new System.Drawing.Point(310, 262);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 36);
             this.Nuevobutton.TabIndex = 17;
@@ -166,7 +166,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Guardarbutton.Location = new System.Drawing.Point(67, 304);
+            this.Guardarbutton.Location = new System.Drawing.Point(106, 262);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 36);
             this.Guardarbutton.TabIndex = 14;

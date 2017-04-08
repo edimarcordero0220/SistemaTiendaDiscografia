@@ -50,6 +50,8 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.BuscarClienteButton = new System.Windows.Forms.Button();
+            this.TotaltextBox = new System.Windows.Forms.TextBox();
+            this.eliminarfilabutton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +71,7 @@
             this.Buscarbutton.TabIndex = 1;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // label1
             // 
@@ -151,6 +154,7 @@
             this.Nuevobutton.TabIndex = 14;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Agregarbutton
             // 
@@ -172,6 +176,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.eliminarfilabutton);
             this.groupBox1.Controls.Add(this.PreciotextBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.BuscarDiscbutton);
@@ -219,7 +224,7 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(6, 54);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(730, 181);
+            this.dataGridView.Size = new System.Drawing.Size(668, 181);
             this.dataGridView.TabIndex = 0;
             // 
             // Eliminarbutton
@@ -230,6 +235,7 @@
             this.Eliminarbutton.TabIndex = 18;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -251,11 +257,30 @@
             this.BuscarClienteButton.UseVisualStyleBackColor = true;
             this.BuscarClienteButton.Click += new System.EventHandler(this.BuscarClienteButton_Click);
             // 
+            // TotaltextBox
+            // 
+            this.TotaltextBox.Location = new System.Drawing.Point(629, 339);
+            this.TotaltextBox.Name = "TotaltextBox";
+            this.TotaltextBox.Size = new System.Drawing.Size(80, 20);
+            this.TotaltextBox.TabIndex = 22;
+            // 
+            // eliminarfilabutton
+            // 
+            this.eliminarfilabutton.Location = new System.Drawing.Point(679, 100);
+            this.eliminarfilabutton.Name = "eliminarfilabutton";
+            this.eliminarfilabutton.Size = new System.Drawing.Size(57, 23);
+            this.eliminarfilabutton.TabIndex = 23;
+            this.eliminarfilabutton.Text = "Eliminar";
+            this.eliminarfilabutton.UseVisualStyleBackColor = true;
+            this.eliminarfilabutton.Click += new System.EventHandler(this.eliminarfilabutton_Click);
+            // 
             // RFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(766, 421);
+            this.Controls.Add(this.TotaltextBox);
             this.Controls.Add(this.BuscarClienteButton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Eliminarbutton);
@@ -304,5 +329,7 @@
         private System.Windows.Forms.Button BuscarDiscbutton;
         private System.Windows.Forms.TextBox PreciotextBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TotaltextBox;
+        private System.Windows.Forms.Button eliminarfilabutton;
     }
 }

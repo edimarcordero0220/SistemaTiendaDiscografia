@@ -15,9 +15,14 @@ namespace SistemaTiendaDiscografia
     public partial class RFacturas : Form
     {
         Utilidades ut = new Utilidades();
+        Factura factura = new Factura();
+
+
+
         public RFacturas()
         {
             InitializeComponent();
+            //LlenarComboCliente();
         }
 
         public void LlenarClase(Factura c)
@@ -29,8 +34,10 @@ namespace SistemaTiendaDiscografia
             c.FechaVenta = FechadateTimePicker.Value;
             c.Nombre = NombretextBox.Text;
             c.NombreDisco = DescripcionDiscotextBox.Text;
-            c.Precio = Utilidades.TOINT(PreciotextBox.Text);
+            c.Precio = Convert.ToDecimal(PreciotextBox.Text);
             
+            //c.Precio = Utilidades.TOINT(PreciotextBox.Text);
+
         }
 
 
@@ -72,6 +79,10 @@ namespace SistemaTiendaDiscografia
             {
                 dataGridView.Rows.Add(IdDiscotextBox.Text, DescripcionDiscotextBox.Text, PreciotextBox.Text);
             }
+            
+            
+          
+          
         }
 
         private void Factura_Load(object sender, EventArgs e)
@@ -98,8 +109,19 @@ namespace SistemaTiendaDiscografia
 
 
         }
-        
-       
+        /* private void LlenarComboCliente()
+         {
+             List<Clientes> lista = BLL.ClientesBLL.GetLista();
+             ClientecomboBox.DataSource = lista;
+             ClientecomboBox.DisplayMember = "NombreCliente";
+             ClientecomboBox.ValueMember = "IdCliente";
+         }*/
+
+        /*private void CalcularTotal()
+        {
+            factura.Total += detalle.Factura.Costo * CantidadnumericUpDown.Value;
+            TotaltextBox.Text = factura.Total.ToString();
+        }*/
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Factura F = new Factura();
@@ -109,6 +131,56 @@ namespace SistemaTiendaDiscografia
 
         }
 
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            FacturaBLL.Eliminar(ut.String(FacturaIdtextBox.Text));
+            MessageBox.Show("Eliminado");
+        }
 
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            BuscarFactura(FacturaBLL.Buscar(String(FacturaIdtextBox.Text)));
+        }
+        public void BuscarFactura(Entidades.Factura factura)
+        {
+            
+                FacturaIdtextBox.Text = factura.IdFactura.ToString();
+                NombretextBox.Text = factura.Nombre;
+                DescripcionDiscotextBox.Text = factura.NombreDisco;
+            IdDiscotextBox.Text = factura.IdCliente.ToString();
+
+            FechadateTimePicker.Value = factura.FechaVenta;
+            LlenarGrid(factura);
+
+            
+        }
+        private void LlenarGrid(Factura factura)
+        {
+           /* dataGridView.DataSource = null;
+            dataGridView.DataSource = factura.Detalle.ToList();
+            this.dataGridView.Columns["FacturaServicioId"].Visible = false;
+            this.dataGridView.Columns["FacturaId"].Visible = false;
+            this.dataGridView.Columns["Servicio"].Visible = false;*/
+
+        }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            IdDiscotextBox.Text = "";
+            NombretextBox.Text = "";
+            DescripcionDiscotextBox.Text = "";
+
+        }
+
+        private void eliminarfilabutton_Click(object sender, EventArgs e)
+        {
+            if(dataGridView.DataSource != null)
+            {
+                MessageBox.Show("No ha selecionado una fila ");
+            }else
+            {
+                dataGridView.Rows.RemoveAt(dataGridView.CurrentRow.Index);
+            }
+        }
     }
 }

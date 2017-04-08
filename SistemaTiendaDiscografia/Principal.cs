@@ -72,5 +72,10 @@ namespace SistemaTiendaDiscografia
             cu.MdiParent = this.MdiParent;
             cu.Show();
         }
+
+        private void discoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
