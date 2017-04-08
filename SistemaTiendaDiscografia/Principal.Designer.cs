@@ -42,6 +42,7 @@
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.discosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.consultasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(759, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(933, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,21 +78,21 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // discosToolStripMenuItem
             // 
             this.discosToolStripMenuItem.Name = "discosToolStripMenuItem";
-            this.discosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.discosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.discosToolStripMenuItem.Text = "Discos";
             this.discosToolStripMenuItem.Click += new System.EventHandler(this.discosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -101,21 +102,21 @@
             this.facturasToolStripMenuItem,
             this.discoToolStripMenuItem});
             this.detalleToolStripMenuItem.Name = "detalleToolStripMenuItem";
-            this.detalleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.detalleToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.detalleToolStripMenuItem.Text = "Detalle ";
             this.detalleToolStripMenuItem.Click += new System.EventHandler(this.detalleToolStripMenuItem_Click);
             // 
             // facturasToolStripMenuItem
             // 
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.facturasToolStripMenuItem.Text = "Facturas";
             this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
             // discoToolStripMenuItem
             // 
             this.discoToolStripMenuItem.Name = "discoToolStripMenuItem";
-            this.discoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.discoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.discoToolStripMenuItem.Text = "Disco";
             this.discoToolStripMenuItem.Click += new System.EventHandler(this.discoToolStripMenuItem_Click);
             // 
@@ -163,6 +164,16 @@
             this.label1.Text = "Registro y Venta Discografica";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(286, 388);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(399, 46);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Edimar The Producer";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,7 +181,8 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = global::SistemaTiendaDiscografia.Properties.Resources.j;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(759, 394);
+            this.ClientSize = new System.Drawing.Size(933, 512);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -201,5 +213,6 @@
         private System.Windows.Forms.ToolStripMenuItem detalleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem discoToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
     }
 }

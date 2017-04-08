@@ -170,11 +170,13 @@ namespace SistemaTiendaDiscografia
                 NombretextBox.Text = factura.Nombre;
                 DescripcionDiscotextBox.Text = factura.NombreDisco;
             IdDiscotextBox.Text = factura.IdCliente.ToString();
+            
 
             FechadateTimePicker.Value = factura.FechaVenta;
             LlenarGrid(factura);
-
             
+
+
         }
         private void LlenarGrid(Factura factura)
         {
